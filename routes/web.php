@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 Route::controller(ButtonController::class)->group(function(){
     Route::get('/add/button','addButton')->name('add.button')->middleware(['auth']);
     Route::post('/store/button','StoreButton')->name('store.button')->middleware(['auth']);
-
+    Route::post('/get/user/button','getUserButtons')->name('get.user.buttons');
 });
 
 

@@ -14,9 +14,32 @@
                     <div class="banner__img text-center text-xxl-end">
                           <a href="{{route('add.button')}}" class="btn banner__btn wow fadeInUp" ">add new button</a>
                     </div>
+                                               
+                    
+                    <form method="post" action="{{route('get.user.buttons')}}" >
+                    @csrf   
+                    <label for="user_id" class="col-sm-2 col-form-label">user id</label>
+            <div class="col-sm-10">
+                 <input class="name" type="text" placeholder=" " value=""name="user_id" id="user_id">
+            </div>
+       
+  <div class="row mb-3">
+     <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <Button class=" btn btn-success waves-effect waves-light" type="submit" >Get user's Buttons</button>
+        </div>
+  </div>                                                  
+
 
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    
 </x-app-layout>

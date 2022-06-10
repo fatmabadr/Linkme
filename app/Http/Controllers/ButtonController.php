@@ -25,6 +25,12 @@ class ButtonController extends Controller
             'user_id'=>Auth::user()->id
                       ]);
         return $request;
+    }//end of method
+
+    public function getUserButtons(Request $request){
+        $userButtons=Button::where('user_id',$request->user_id)->get();
+        return $userButtons;
+
 
 
     }
