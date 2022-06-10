@@ -18,9 +18,9 @@
                     
                     <form method="post" action="{{route('get.user.buttons')}}" >
                     @csrf   
-                    <label for="user_id" class="col-sm-2 col-form-label">user id</label>
+                    <label for="username" class="col-sm-2 col-form-label">userName</label>
             <div class="col-sm-10">
-                 <input class="name" type="text" placeholder=" " value=""name="user_id" id="user_id">
+                 <input class="name" type="text" placeholder=" " value=""name="username" id="username">
             </div>
        
   <div class="row mb-3">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Button;
+
 use App\Models\User;
 class ButtonController extends Controller
 {
@@ -28,8 +29,11 @@ class ButtonController extends Controller
     }//end of method
 
     public function getUserButtons(Request $request){
-        $userButtons=Button::where('user_id',$request->user_id)->get();
-        return $userButtons;
+        
+         $user_id=User::where('username',$request->username)->get('id');
+    
+         $userButtons=Button::where('user_id',$user_id[0]->id)->get();
+             return $userButtons;
 
 
 
